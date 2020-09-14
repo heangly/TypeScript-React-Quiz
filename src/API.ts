@@ -3,9 +3,8 @@ import {shuffleArray, Question} from './utils';
 
 
 const fetchQuestions = async (amount: number, diffculty: string ) => {
-  const apiURL = `https://opentdb.com/api.php?amount=${amount}&difficulty=${diffculty}&category=18`;
+  const apiURL = `https://opentdb.com/api.php?amount=${amount}&difficulty=${diffculty}&category=18&type=multiple`;
   const res = await axios.get(apiURL);
-  console.log(res);
   return res.data.results.map((question: Question) => (
     {
       ...question,

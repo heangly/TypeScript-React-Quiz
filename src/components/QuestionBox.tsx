@@ -1,5 +1,6 @@
 import React from 'react';
 import {AnswerObject} from '../utils';
+// import {v4 as uuid} from 'uuid';
 import '../styles/QuestionBox.css';
 
 type Props = {
@@ -19,7 +20,7 @@ const QuestionBox: React.FC<Props> = ({question, answers, callback, userAnswer, 
       <div className='QuestionBox-answers'>
         {answers.map(answer => (
           <div key={answer}>
-            <button className={userAnswer?.correctAnswer === answer ? 'btn btn-block btn-success' : 'btn btn-block btn-light'}
+              <button className={userAnswer?.correctAnswer === answer ? 'btn btn-block btn-success' : 'btn btn-block btn-light'}
               disabled={userAnswer ? true: false}
               onClick={callback}
               value={answer}

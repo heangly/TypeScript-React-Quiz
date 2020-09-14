@@ -15,8 +15,6 @@ const Quiz = () => {
 
   const totalQuestion = 10;
 
-  
-
   const startQuiz = async () => {
     setLoading(true);
     setGameOver(false);
@@ -27,7 +25,7 @@ const Quiz = () => {
     setNumber(0);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
  
   };
 
@@ -37,7 +35,9 @@ const Quiz = () => {
       const correct = questions[number].correct_answer === answer;
       if (correct){
         setScore(prev => prev+1)
-      }else{
+      }
+      else{
+        console.log(e.currentTarget)
         e.currentTarget.style.backgroundColor ='red';
         e.currentTarget.style.border ='none';
       }
