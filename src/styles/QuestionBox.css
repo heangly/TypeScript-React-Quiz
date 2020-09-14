@@ -1,0 +1,18 @@
+.QuestionBox{
+  padding: 30px 20px;
+  border-radius: 30px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.QuestionBox-answers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.QuestionBox-answers button{
+  width: 300px;
+  margin: 10px 0;
+}
